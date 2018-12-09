@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: Zungtaz
  * Date: 12/9/2018
- * Time: 8:37 PM
+ * Time: 9:23 PM
  */
 
-namespace DAO;
+namespace DTO;
 
 
-class DB
+class SanPham
 {
 
 }
