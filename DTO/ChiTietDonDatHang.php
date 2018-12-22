@@ -3,7 +3,7 @@
 namespace DTO;
 
 
-class ChiTietDonHang
+class ChiTietDonDatHang
 {
     var $STT; 
     var $SoLuong;

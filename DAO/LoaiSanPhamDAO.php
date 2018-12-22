@@ -5,9 +5,8 @@ use DTO;
 
 class LoaiSanPhamDAO extends DB
 {
-    public function getAll()
+    private function Exc($sql)
     {
-        $sql = "SELECT idLoaiSanPham, TenLoai, Deleted FROM LOAISANPHAM";
         $result = $this->ExcuteQuery($sql);
         $lstLoaiSanPham = array();
         while($row = mysqli_fetch_array($result))
@@ -17,5 +16,10 @@ class LoaiSanPhamDAO extends DB
             $lstLoaiSanPham[] = $LoaiSanPham;
         }
         return $lstLoaiSanPham;
+    }
+    public function getAll()
+    {
+        $sql = "SELECT idLoaiSanPham, TenLoai, Deleted FROM LOAISANPHAM";
+        return $this->Exc($sql);
     }
 }
