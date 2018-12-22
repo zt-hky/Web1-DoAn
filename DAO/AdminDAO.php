@@ -6,7 +6,7 @@ use DTO;
 class AdminDAO extends DB
 {
 
-    private function Exc($sql)
+    private function ExcManyRow($sql)
     {
         $result = $this->ExcuteQuery($sql);
         $lstAdmin = array();
@@ -19,9 +19,13 @@ class AdminDAO extends DB
         return $lstAdmin;
     }
 
+
+    
+    
+
     public function getAll()
     {
         $sql = "SELECT `user`, `password`, `fullName` FROM `ADMIN`";
-        return $this->Exc($sql);
+        return $this->ExcManyRow($sql);
     }
 }

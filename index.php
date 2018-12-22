@@ -1,21 +1,16 @@
 <?php
 
-
-
-include_once "DAO\DB.php";
-include_once "DAO\LoaiSanPhamDAO.php";
-include_once "DTO\LoaiSanPham.php";
-
+require_once "autoload.php";
 
 echo "<pre>";
 print_r ($config);
 
 
-$Bus = new DAO\LoaiSanPhamDAO();
+$Bus = new BUS\SanPhamBUS();
 
 $s = $Bus->getAll();
 
-echo "---------------\n";
+
 
 print_r($s);
 

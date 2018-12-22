@@ -5,7 +5,7 @@ use DTO;
 
 class LoaiSanPhamDAO extends DB
 {
-    private function Exc($sql)
+    private function ExcManyRow($sql)
     {
         $result = $this->ExcuteQuery($sql);
         $lstLoaiSanPham = array();
@@ -20,6 +20,6 @@ class LoaiSanPhamDAO extends DB
     public function getAll()
     {
         $sql = "SELECT idLoaiSanPham, TenLoai, Deleted FROM LOAISANPHAM";
-        return $this->Exc($sql);
+        return $this->ExcManyRow($sql);
     }
 }

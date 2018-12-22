@@ -6,7 +6,7 @@ use DTO;
 class ChiTietDonDatHangDAO extends DB
 {
 
-    private function Exc($sql)
+    private function ExcManyRow($sql)
     {
         $result = $this->ExcuteQuery($sql);
         $lstCTDDH = array();
@@ -22,7 +22,7 @@ class ChiTietDonDatHangDAO extends DB
     public function getAll()
     {
         $sql = "SELECT `STT`, `SoLuong`, `idGioHang`, `idSanPham`, `Gia` FROM `CHITIETDONDATHANG`";
-        return $this->Exc($sql);
+        return $this->ExcManyRow($sql);
     }
 
 

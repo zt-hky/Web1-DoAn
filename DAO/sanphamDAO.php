@@ -7,13 +7,13 @@
  */
 
 namespace DAO;
-
+use DTO;
 
 class SanPhamDAO extends DB
 {
-    public function getAll()
+
+    private function ExcManyRow($sql)
     {
-        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM";
         $result = $this->ExcuteQuery($sql);
         $lstSanPham = array();
         while($row = mysqli_fetch_array($result))
@@ -23,6 +23,12 @@ class SanPhamDAO extends DB
             $lstSanPham[] = $SanPham;
         }
         return $lstSanPham;
+    }
+
+    public function getAll()
+    {
+        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM";
+        return $this->ExcManyRow($sql);
     }
 
     public function getByID($id)

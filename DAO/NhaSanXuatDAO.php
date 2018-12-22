@@ -5,18 +5,24 @@ use DTO;
 
 class NhaSanXuatDAO extends DB
 {
-    public function getAll()
+
+    private function ExcManyRow($sql)
     {
-        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` FROM `NHASANXUAT`";
         $result = $this->ExcuteQuery($sql);
         $lstNSX = array();
         while($row = mysqli_fetch_array($result))
         {
-            $NSX = new DTO\NSX();
+            $NSX = new DTO\NhaSanXuat();
             $NSX->readRow($row);
-            $NSX[] = $NSX;
+            $lstNSX[] = $NSX;
         }
         return $lstNSX;
     }
+
+    public function getAll()
+    {
+        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` FROM `NHASANXUAT`";
+        return $this->ExcManyRow($sql);
     }
+    
 }
