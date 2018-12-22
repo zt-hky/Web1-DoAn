@@ -1,12 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Zungtaz
- * Date: 12/9/2018
- * Time: 8:23 PM
- */
 
-function __autoload($class_name)
-{
-    
-}
+require_once "autoload.php";
+
+echo "<pre>";
+print_r ($config);
+
+
+$Bus = new BUS\SanPhamBUS();
+
+$s = $Bus->getAll();
+
+
+
+print_r($s);
+
+
+echo "</pre>";
