@@ -1,18 +1,15 @@
 <?php
 
+echo "<pre>";
+define( 'BASEDIR', '' );
+
+
 require_once "autoload.php";
 
-echo "<pre>";
-print_r ($config);
-
-
-$Bus = new BUS\SanPhamBUS();
-
-$s = $Bus->getAll();
+require_once "Route\Web.php";
 
 
 
-print_r($s);
 
 
 echo "</pre>";

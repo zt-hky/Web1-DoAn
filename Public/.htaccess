@@ -2,6 +2,22 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^$ index.php
-RewriteRule ^404.html$ error.html
-RewriteRule ^admin$ admin.html
+
+
+RewriteRule ^.+$ index.php
+
+# doan.local/
+
+# doan.local/catalog/[page]/[keyword]/[kind =all]/[nsx =all]/[1000-2000]
+
+# doan.local/kind/[name]/[numberPage]
+
+# doan.local/nsx/[name]/[numberPage]
+
+# doan.local/sanpham/ten-gi-do-127
+
+# doan.local/dondathang
+
+# doan.local/giodang/
+
+# doan.local/api/[table]/[]
