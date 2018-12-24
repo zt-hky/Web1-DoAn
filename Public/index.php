@@ -1,8 +1,9 @@
 <?php
-echo "<pre>";
 
-print_r ($_SERVER);
+require_once('autoload.php');
+
+Controller('Catalog');
 
 
-echo "</pre>";
+
 ?>
