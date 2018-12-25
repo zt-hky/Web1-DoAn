@@ -19,7 +19,7 @@ class LoaiSanPhamDAO extends DB
     }
     public function getAll()
     {
-        $sql = "SELECT idLoaiSanPham, TenLoai, Deleted FROM LOAISANPHAM";
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM`";
         return $this->ExcManyRow($sql);
     }
 }

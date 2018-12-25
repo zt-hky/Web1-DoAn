@@ -1,9 +1,12 @@
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
+
 RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt)$
 
+
 RewriteRule ^ index.php
+
+RewriteRule ^test.*$ index.php?c=Test 
 
 # doan.local/
 

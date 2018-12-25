@@ -19,6 +19,7 @@ class DB
     
     public function __construct()
     {
+        GLOBAl $__gCONFIG;
         $CONFIG = $__gCONFIG;
         $this->db_host = $CONFIG["db_host"];
         $this->db_dbName = $CONFIG["db_name"];
