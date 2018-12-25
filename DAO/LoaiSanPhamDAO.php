@@ -17,6 +17,14 @@ class LoaiSanPhamDAO extends DB
         }
         return $lstLoaiSanPham;
     }
+
+    public function getAllAvailable(Type $var = null)
+    {
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `Deleted` = 0";
+        return $this->ExcManyRow($sql);
+    }
+
+
     public function getAll()
     {
         $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM`";

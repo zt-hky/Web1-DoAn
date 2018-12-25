@@ -18,4 +18,9 @@ class LoaiSanPhamBUS
     {
         return $this->LoaiSanPhamDAO->getAll();
     }
+
+    public function getAllAvailable()
+    {
+        return $this->LoaiSanPhamDAO->getAllAvailable();
+    }
 }
