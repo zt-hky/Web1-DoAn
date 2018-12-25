@@ -36,7 +36,8 @@ class SanPhamDAO extends DB
         $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
         $sql = $sql."FROM `SANPHAM`";
         $sql = $sql."WHERE `Deleted` = 0";
-        $sql = $sql."LIMIT $begin, $limit";
+        $sql = $sql." LIMIT $begin, $limit";
+  
         return $this->ExcManyRow($sql);
     }
 

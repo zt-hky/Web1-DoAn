@@ -44,112 +44,20 @@
 
             </nav>
             <section class="content_item_list">
+                <?php
+        
+                foreach($lstSanPham as $SanPham) 
+                {
+                ?>
                 <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
+                    <img src="<?php #asset($SanPham->Img)?>" alt="">
+                    <h4><?php# echo $SanPham->TenSP ?></h4>
+                    <div><?php echo round($SanPham->Gia) ?>đ</div>
                     <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
+                    <i>Lượt mua: <?php echo $SanPham->SLBan ?></i>
                 </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần Sọt</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
-                <article class="content_item_list_item">
-                    <img src="images/quan1.jpg" alt="">
-                    <h4>Quần sort</h4>
-                    <div>213.121đ</div>
-                    <button>Mua ngay</button>
-                    <i>Lượt mua: 213321</i>
-                </article>
+                
+                <?php  } ?>
             </section>
             <nav aria-label="Page navigation example paging">
                 <ul class="pagination">
