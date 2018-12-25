@@ -31,6 +31,15 @@ class SanPhamDAO extends DB
         return $this->ExcManyRow($sql);
     }
 
+    public function getAvailLimit($begin, $limit)
+    {
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
+        $sql = $sql."FROM `SANPHAM`";
+        $sql = $sql."WHERE `Deleted` = 0";
+        $sql = $sql."LIMIT $begin, $limit";
+        return $this->ExcManyRow($sql);
+    }
+
     public function getByID($id)
     {
         $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM WHERE idSanPham = $id";
