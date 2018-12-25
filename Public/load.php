@@ -5,13 +5,17 @@ function __autoload($class_name) {
 }
 
 
-require_once ('../View/View.php');
 
 function Controller($controller)
 {
     require_once("../Controller/".$controller."Controller.php");
 }
 
+function View($view)
+{
+    require("../View/".$view.".php");
+}
 
 
-
+global $CONFIG;
+$CONFIG = parse_ini_file("../config.ini"); 

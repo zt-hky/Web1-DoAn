@@ -1,8 +1,8 @@
 <?php
 
-require_once('autoload.php');
+require_once('load.php');
 
-Controller('Catalog');
+Controller('Homepage');
 
 
 
