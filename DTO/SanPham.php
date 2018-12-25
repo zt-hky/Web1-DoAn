@@ -17,6 +17,7 @@ class SanPham
     var $idNSX;
     var $Time;
     var $Deleted;
+    var $Img;
    
     public function __construct()
     {
@@ -31,7 +32,7 @@ class SanPham
         $this->idLoaiSanPham = 0;
         $this->idNSX         = 0;
         $this->Time;
-
+        $this->Img = "";
     }
 
     public function readRow($row)
@@ -48,5 +49,6 @@ class SanPham
         $this->idNSX         = $row["idNSX"];
         $this->Time          = $row["Time"];
         $this->Deleted       = $row["Deleted"];
+        $this->Img           = $row["Img"];
     }
 }   

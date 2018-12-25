@@ -11,7 +11,7 @@ class LoaiSanPhamBUS
 
     public function __construct()
     {
-        $this->LoaiSanPhamDAO = new DAO\DAO\LoaiSanPhamDAO();
+        $this->LoaiSanPhamDAO = new DAO\LoaiSanPhamDAO();
     }
 
     public function getAll()

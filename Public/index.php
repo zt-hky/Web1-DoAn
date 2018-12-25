@@ -1,8 +1,12 @@
 <?php
-
 require_once('load.php');
 
-Controller('Homepage');
+
+$__gController = empty($_GET['c']) ? $__gCONFIG['CONTROLLER_DEFAULT'] : $_GET['c'];
+
+
+Controller($__gController);
+
 
 
 

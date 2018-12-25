@@ -151,9 +151,6 @@
                     <i>Lượt mua: 213321</i>
                 </article>
             </section>
-
-
-
             <nav aria-label="Page navigation example paging">
                 <ul class="pagination">
                     <li class="page-item">

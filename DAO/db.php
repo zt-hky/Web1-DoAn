@@ -19,8 +19,7 @@ class DB
     
     public function __construct()
     {
-        global $CONFIG;
-        $config = parse_ini_file("config.ini");
+        $CONFIG = $__gCONFIG;
         $this->db_host = $CONFIG["db_host"];
         $this->db_dbName = $CONFIG["db_name"];
         $this->db_user = $CONFIG["db_user"];
