@@ -19,6 +19,12 @@ class SanPhamBUS
     {
        return $this->SanPhamDAO->getAll(); 
     }
+
+    public function getAvailLimit($page,$limit)
+    {
+        $begin = ($page-1)*$limit;
+        return $this->SanPhamDAO->getAvailLimit($begin,$limit);
+    }
 }
 
 
