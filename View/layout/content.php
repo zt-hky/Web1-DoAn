@@ -50,8 +50,8 @@
                 {
                 ?>
                 <article class="content_item_list_item">
-                    <img src="<?php #asset($SanPham->Img)?>" alt="">
-                    <h4><?php# echo $SanPham->TenSP ?></h4>
+                    <img src="<?php asset($SanPham->Img)?>" alt="">
+                    <h4><?php echo substr($SanPham->TenSP,0,32) ?></h4>
                     <div><?php echo round($SanPham->Gia) ?>đ</div>
                     <button>Mua ngay</button>
                     <i>Lượt mua: <?php echo $SanPham->SLBan ?></i>

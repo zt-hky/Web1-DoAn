@@ -19,7 +19,10 @@ class SanPhamBUS
     {
        return $this->SanPhamDAO->getAll(); 
     }
-
+    public function countPageVail($limit)
+    {
+        return ceil($this->SanPhamDAO->countVail()/$limit);
+    }
     public function getAvailLimit($page,$limit)
     {
         $begin = ($page-1)*$limit;
