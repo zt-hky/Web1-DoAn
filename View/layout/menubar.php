@@ -6,6 +6,7 @@
                     <a href="<?= asset('nsx/'.$NSX->Url) ?>"><?php echo $NSX->TenNSX ?></a>
                 </li>
 <?php }?>
+
             </ul>
         </aside>
        

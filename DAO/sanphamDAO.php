@@ -58,6 +58,12 @@ class SanPhamDAO extends DB
         $SanPham->readRow($row);
         return $SanPham;
     }
+
+    public function getByNSX($idNSX)
+    {
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idNSX` = $idNSX";
+        return $this->ExcManyRow($sql);
+    }
 }
 
 

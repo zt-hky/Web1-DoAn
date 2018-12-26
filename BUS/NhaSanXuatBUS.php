@@ -23,4 +23,18 @@ class NhaSanXuatBUS
     {
         return $this->NhaSanXuatDAO->getAllAvailable();
     }
+
+    public function getIdFURL($Url)
+    {
+        $lstNSX = $this->NhaSanXuatDAO->getfUrl($Url);
+        if(count($lstNSX) > 0)
+        {
+            return $lstNSX[0]['idNSX'];
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }

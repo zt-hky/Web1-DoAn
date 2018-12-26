@@ -10,6 +10,8 @@ class NhaSanXuatDAO extends DB
     {
         $result = $this->ExcuteQuery($sql);
         $lstNSX = array();
+
+
         while($row = mysqli_fetch_array($result))
         {
             $NSX = new DTO\NhaSanXuat();
@@ -17,6 +19,12 @@ class NhaSanXuatDAO extends DB
             $lstNSX[] = $NSX;
         }
         return $lstNSX;
+    }
+
+    public function getfUrl($Url)
+    {
+        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` , `Url` FROM `NHASANXUAT` WHERE `Url` = '$Url'";
+        return $this->ExcManyRow($sql);
     }
 
     public function getAll()

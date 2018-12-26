@@ -10,7 +10,7 @@ RewriteRule ^$ index.php [L]
 
 RewriteRule ^kind/([A-z|-]+)/?$ index.php?c=Catalog&lsp=$1 [QSA,L]
 
-RewriteRule ^nsx/([A-z|-]+)/?$ index.php?c=Catalog&nsx=$1 [QSA,L]   
+RewriteRule ^nsx/([A-z|-]+)/?$ index.php?c=NhaSanXuat&nsx=$1 [QSA,L]   
 
 RewriteRule ^sanpham/[A-z|-]+-([0-9]+).html$ index.php?c=SanPham&id=$1 [QSA,L]
 

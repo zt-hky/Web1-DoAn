@@ -28,6 +28,10 @@ class SanPhamBUS
         $begin = ($page-1)*$limit;
         return $this->SanPhamDAO->getAvailLimit($begin,$limit);
     }
+    public function getByNSX($idNSX)
+    {
+        return $this->SanPhamDAO->getByNSX($idNSX);
+    }
 }
 
 
