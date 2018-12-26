@@ -24,7 +24,7 @@
                   </nav>
         <section class="header_intro">
             <section class="header_intro_1">
-                <H1>KKSHOP</H1>
+              
                 <img src="images/logo.png" alt="">
             </section>
             <section class="header_intro_2">

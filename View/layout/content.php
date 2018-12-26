@@ -56,7 +56,7 @@
                     <button>Mua ngay</button>
                     <i>Lượt mua: <?php echo $SanPham->SLBan ?></i>
                 </article>
-                
+             
                 <?php  } ?>
             </section>
             <nav aria-label="Page navigation example paging">
