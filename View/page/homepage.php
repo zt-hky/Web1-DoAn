@@ -16,5 +16,5 @@ view('layout/head');
 <script src="<?=asset('js/bootstrap.min.js')?>"></script>
 <script src="<?=asset('js/jquery.popup.min.js')?>"></script>
 
-<link rel="stylesheet" href="<?=asset('css/bootstrap.min.css')?>">
+
 </body>
