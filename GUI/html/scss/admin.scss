@@ -291,6 +291,31 @@ button {
             }
           
           }
+          &_items{
+              &_xoa{
+                width: 2rem;
+
+              }
+              &_stt{
+                  width:3rem;
+              }
+           
+              &_img{
+                  width:10vw;
+              }
+              &_price{
+               
+                width: 5vw;
+
+
+              }
+              &_hienthi{
+                  width:5vw;
+              }
+              &_tacvu{
+                  width: 5vw;
+              }
+          }
 
     }
 }
