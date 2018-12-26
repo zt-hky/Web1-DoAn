@@ -1,48 +1,6 @@
-<section class="content">
-        <aside class="content_aside">
-            <h3>Bộ lọc Tìm kiếm</h3>
-            <section class="content_aside_section">
-                <section class="content_aside_section_checkbox">
-                    <h3>Nhà sản xuất</h3>
-                    <section class="content_aside_section_checkbox_item">
-                        <article> <input type="checkbox">
-                            <p>Convert</p>
-                        </article>
-                        <article> <input type="checkbox">
-                            <p>Convert</p>
-                        </article>
-                        <article> <input type="checkbox">
-                            <p>Convert</p>
-                        </article>
-                        <article> <input type="checkbox">
-                            <p>Convert</p>
-                        </article>
-                    </section>
-                </section>
-                <section class="content_aside_section_price ">
-                    <h3>Giá</h3>
-                    <section>Từ <input type="text"> Đến <input type="text"> </section>
-                </section>
-            </section>
-        </aside>
+
+        
         <section class="content_item">
-            <nav class="content_item_nav">
-                <h3>Sắp xếp theo</h3>
-                <section class="content_item_nav_sort">
-                    <button class="content_item_nav_sort_item">Mới nhất</button>
-                    <button class="content_item_nav_sort_item">Bán chạy</button>
-                    <div class="dropdown ">
-                        <button class="dropdown_btn content_item_nav_sort_item">Giá
-                        </button>
-                        <div class="dropdown_menu">
-                            <a class="dropdown-item" href="#">Thấp đến cao</a>
-                            <a class="dropdown-item" href="#">Cao đến thấp</a>
-
-                        </div>
-                    </div>
-                </section>
-
-            </nav>
             <section class="content_item_list">
                 <?php
         
@@ -89,4 +47,4 @@
                 </ul>
             </nav>
         </section>
-    </section>
+ 
