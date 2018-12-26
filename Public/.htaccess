@@ -1,13 +1,11 @@
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
+
 
 RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt|webp)$
 
 
-RewriteRule ^/?$ index.php [L]
+RewriteRule ^$ index.php [L]
 
 
 RewriteRule ^kind/([A-z|-]+)/?$ index.php?c=Catalog&lsp=$1 [QSA,L]
@@ -18,7 +16,9 @@ RewriteRule ^sanpham/[A-z|-]+-([0-9]+).html$ index.php?c=SanPham&id=$1 [QSA,L]
 
 RewriteRule ^test.*$ index.php?c=Test [L] 
 
-#RewriteRule ^ /404.html [L,R]
+
+
+ErrorDocument 404 /404.php
 
 
 # doan.local/
