@@ -4,7 +4,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     height: auto;
-    
+
 }
 button,select{
     cursor: pointer;
@@ -23,7 +23,7 @@ a:hover {
     background-color: #3d4243;
     padding-top: 0.5rem;
     position: fixed;
-   left:0;
+    left:0;
     width: 25%;
 
     hr {
@@ -51,7 +51,7 @@ a:hover {
 
             width: 6vw;
             height: 6vw;
-            ;
+        ;
         }
 
     }
@@ -126,7 +126,7 @@ button {
     width: 75%;
     position: absolute;
     right: 0;
-   
+
 
     &_header {
         justify-content: space-around;
@@ -215,19 +215,19 @@ button {
                 }
             }
         }
-       
+
         table, th, td {
             border: 1px solid black;
-          }
-          table{
-              width: 100%;
-             
+        }
+        table{
+            width: 100%;
 
-              tbody{
+
+            tbody{
                 tr:hover{
                     transition: 0.8s;
                     background-color: hsl(0, 0%, 69%);
-                }  
+                }
                 tr{
                     cursor: pointer;
                     height: 6rem;
@@ -240,57 +240,82 @@ button {
                             margin-left: auto;
                             display: block;
                         }
-                       img{
-                           width: 5rem;
-                           margin-right: auto;
-                           margin-left: auto;
-                           display: block;
-                           height: 5rem;
-                       }
-                       i{
-                        margin-left:0.4rem;
-                       transform: translate(150%,0%);
-                        display: inline-block;
-                        
-                       }
-                       i:hover{
-                         color: red;
-                       }
-        
+                        img{
+                            width: 5rem;
+                            margin-right: auto;
+                            margin-left: auto;
+                            display: block;
+                            height: 5rem;
+                        }
+                        i{
+                            margin-left:0.4rem;
+                            transform: translate(150%,0%);
+                            display: inline-block;
+
+                        }
+                        i:hover{
+                            color: red;
+                        }
+
                     }
                 }
             }
-                   
-          }
-          table tr:nth-child(even) {
-            background-color: #eee;
-          }
-          table tr:nth-child(odd) {
-           background-color: #fff;
-          }
 
-          &_search{
-              padding:0.5rem 1rem 2rem 1rem;
-              justify-content: space-between;
-              display: flex;
+        }
+        table tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        &_search{
+            padding:0.5rem 1rem 2rem 1rem;
+            justify-content: space-between;
+            display: flex;
             &-1{
                 input{
-                ::placeholder{
-                    color: #838383;
-                }
+                    ::placeholder{
+                        color: #838383;
+                    }
                 }
                 button{} img{
-                    width: 30px;
-                   height: 30px;
-                }
+                             width: 30px;
+                             height: 30px;
+                         }
             }
             >button{
                 >i{
                     padding-right: 1rem;
                 }
             }
-          
-          }
+
+        }
+        &_items{
+            &_xoa{
+                width: 2rem;
+
+            }
+            &_stt{
+                width:3rem;
+            }
+
+            &_img{
+                width:10vw;
+            }
+            &_price{
+
+                width: 5vw;
+
+
+            }
+            &_hienthi{
+                width:5vw;
+            }
+            &_tacvu{
+                width: 5vw;
+            }
+        }
 
     }
 }
