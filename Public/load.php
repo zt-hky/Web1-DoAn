@@ -21,9 +21,6 @@ function Controller($controller)
 }
 
 
-
-
-
 // Hàm load View
 function View($view,$data= array())
 {
