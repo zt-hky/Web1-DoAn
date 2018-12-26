@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 25, 2018 at 03:28 PM
+-- Generation Time: Dec 26, 2018 at 09:48 AM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -157,22 +157,23 @@ CREATE TABLE IF NOT EXISTS `LOAISANPHAM` (
   `idLoaiSanPham` int(11) NOT NULL,
   `TenLoai` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Deleted` tinyint(4) DEFAULT NULL,
-  `Img` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
+  `Img` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Url` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `LOAISANPHAM`
 --
 
-INSERT INTO `LOAISANPHAM` (`idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`) VALUES
-(1, 'Áo', 0, 'images/LoaiSanPham/ao.png'),
-(2, 'Quần', 0, 'images/LoaiSanPham/ao.png'),
-(3, 'Mắt kính', 0, 'images/LoaiSanPham/ao.png'),
-(4, 'Thắt lưng', 0, 'images/LoaiSanPham/ao.png'),
-(5, 'Vớ', 0, 'images/LoaiSanPham/ao.png'),
-(6, 'Giày', 0, 'images/LoaiSanPham/ao.png'),
-(7, 'Vớ', 0, 'images/LoaiSanPham/ao.png'),
-(8, 'Mũ', 0, 'images/LoaiSanPham/mu.jpg');
+INSERT INTO `LOAISANPHAM` (`idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`, `Url`) VALUES
+(1, 'Áo', 0, 'images/LoaiSanPham/ao.png', NULL),
+(2, 'Quần', 0, 'images/LoaiSanPham/ao.png', NULL),
+(3, 'Mắt kính', 0, 'images/LoaiSanPham/ao.png', NULL),
+(4, 'Thắt lưng', 0, 'images/LoaiSanPham/ao.png', NULL),
+(5, 'Vớ', 0, 'images/LoaiSanPham/ao.png', NULL),
+(6, 'Giày', 0, 'images/LoaiSanPham/ao.png', NULL),
+(7, 'Vớ', 0, 'images/LoaiSanPham/ao.png', NULL),
+(8, 'Mũ', 0, 'images/LoaiSanPham/mu.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -183,22 +184,23 @@ INSERT INTO `LOAISANPHAM` (`idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`) VALUES
 CREATE TABLE IF NOT EXISTS `NHASANXUAT` (
   `idNSX` int(11) NOT NULL,
   `TenNSX` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Deleted` tinyint(4) DEFAULT NULL
+  `Deleted` tinyint(4) DEFAULT NULL,
+  `Url` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `NHASANXUAT`
 --
 
-INSERT INTO `NHASANXUAT` (`idNSX`, `TenNSX`, `Deleted`) VALUES
-(1, 'FILA', 0),
-(2, 'Adidas', 0),
-(3, 'Vans', 0),
-(4, 'Louis Vuitton', 0),
-(5, 'Chanel', 0),
-(6, 'Gucci', 0),
-(7, 'Nike', 0),
-(8, 'Converse', 0);
+INSERT INTO `NHASANXUAT` (`idNSX`, `TenNSX`, `Deleted`, `Url`) VALUES
+(1, 'FILA', 0, 'fila'),
+(2, 'Adidas', 0, 'adidas'),
+(3, 'Vans', 0, 'vans'),
+(4, 'Louis Vuitton', 0, 'louis vuitton'),
+(5, 'Chanel', 0, 'chanel'),
+(6, 'Gucci', 0, 'gucci'),
+(7, 'Nike', 0, 'nike'),
+(8, 'Converse', 0, 'converse');
 
 -- --------------------------------------------------------
 
@@ -228,10 +230,17 @@ CREATE TABLE IF NOT EXISTS `SANPHAM` (
 --
 
 INSERT INTO `SANPHAM` (`idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`) VALUES
-(1, 'Áo thun thể thao nam Adidas Coref Jersey (màu Vàng)', 549000, 54, 47, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, NULL),
-(2, 'Áo thun thể thao nam Adidas Coref Jersey (màu Trang)', 549000, 53, 36, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, NULL),
-(3, 'Áo thun thể thao nam Adidas Tee 03 (màu Trắng)', 626000, 100, 81, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, NULL),
-(4, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, NULL);
+(1, 'Áo thun thể thao nam Adidas Coref Jersey (màu Vàng)', 549000, 54, 47, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\1.webp'),
+(2, 'Áo thun thể thao nam Adidas Coref Jersey (màu Trắng)', 549000, 53, 36, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\2.webp'),
+(3, 'Áo thun thể thao nam Adidas Tee 03 (màu Cam)', 626000, 100, 81, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\3.jpg'),
+(4, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\4.jpg'),
+(5, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-15', 0, 1, 'images\\SanPham\\4.jpg'),
+(6, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-16', 0, 1, 'images\\SanPham\\4.jpg'),
+(7, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-17', 0, 1, 'images\\SanPham\\4.jpg'),
+(8, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-18', 0, 1, 'images\\SanPham\\4.jpg'),
+(9, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-19', 0, 1, 'images\\SanPham\\4.jpg'),
+(10, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-20', 0, 1, 'images\\SanPham\\4.jpg'),
+(11, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-21', 0, 1, 'images\\SanPham\\4.jpg');
 
 -- --------------------------------------------------------
 

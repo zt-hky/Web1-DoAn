@@ -21,7 +21,13 @@ class NhaSanXuatDAO extends DB
 
     public function getAll()
     {
-        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` FROM `NHASANXUAT`";
+        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` , `Url` FROM `NHASANXUAT`";
+        return $this->ExcManyRow($sql);
+    }
+
+    public function getAllAvailable(Type $var = null)
+    {
+        $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` , `Url` FROM `NHASANXUAT` WHERE `Deleted` = 0";
         return $this->ExcManyRow($sql);
     }
     
