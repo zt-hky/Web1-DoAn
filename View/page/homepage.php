@@ -6,9 +6,10 @@ view('layout/head');
 
 <?= view('layout/header'); 
     view('layout/navbar',array("lstLoaiSanPham"=>$lstLoaiSanPham));
-    view('layout/content',array('lstSanPham'=>$lstSanPham));
+    view('layout/content',array('lstSanPham'=>$lstSanPham,'page'=>$page));
     view('layout/footer');
 ?>
+
 
 
 

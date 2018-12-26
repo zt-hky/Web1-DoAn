@@ -12,6 +12,6 @@ $amountPage = $spBUS->countPageVail($limit);
 
 $v_Data['lstLoaiSanPham'] = $lspBUS->getAllAvailable();
 $v_Data['lstSanPham']     = $spBUS->getAvailLimit($page,$limit);
-$v_Data['page']           = array('page'=>$page,'amountPage'=>$amountPage);
+$v_Data['page']           = array('pageNow'=>$page,'amountPage'=>$amountPage);
 
 View('page/homepage',$v_Data);
