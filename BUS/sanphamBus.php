@@ -77,6 +77,12 @@ class SanPhamBUS
         return $this->SanPhamDAO->getByID($idSP);
         
     }
+    public function getSPlquan($idSP)
+    {
+        return $this->SanPhamDAO->getSPlquan($idSP);
+        
+    }
+  
 }
 
 

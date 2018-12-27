@@ -9,7 +9,8 @@ $nsxBUS = new BUS\NhaSanXuatBUS();
 $limit = 20;
 $page = empty($_GET['page'])?1:$_GET['page'];
 
-$amountPage = $spBUS->countPageVail($limit);
+$spBUS->readAllVail();
+$amountPage = $spBUS->countPage($limit);
 
 
 $v_Data['lstLoaiSanPham'] = $lspBUS->getAllAvailable();
