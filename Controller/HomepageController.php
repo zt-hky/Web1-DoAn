@@ -6,7 +6,7 @@ $lspBUS = new BUS\LoaiSanPhamBUS();
 $spBUS  = new BUS\SanPhamBUS();
 $nsxBUS = new BUS\NhaSanXuatBUS();
 
-$limit = 20;
+$limit = 10;
 $page = empty($_GET['page'])?1:$_GET['page'];
 
 $spBUS->readAllVail();

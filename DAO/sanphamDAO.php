@@ -71,15 +71,20 @@ class SanPhamDAO extends DB
        
     }
 
+    public function getVailLSP($lsp)
+    {
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `Deleted` = 0 AND  `idNSX` = $idNSX " ;
+        return $this->ExcManyRow($sql);
+    }
+
     public function getVailNSX($idNSX)
     {
-        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `idNSX` = $idNSX " ;
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `Deleted` = 0 AND `idNSX` = $idNSX " ;
         return $this->ExcManyRow($sql);
     }
     public function getSPlquan($idloaiSP)
     {
-        $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idLoaiSanPham` =$idloaiSP "  ;
-        var_dump($sql);
+        $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `Deleted` = 0 and `idLoaiSanPham`  =$idloaiSP"  ;
         return $this->ExcManyRow($sql);
     }
 }
