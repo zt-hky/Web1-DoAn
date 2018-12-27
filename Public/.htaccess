@@ -14,6 +14,8 @@ RewriteRule ^nsx/([A-z|-]+)/?$ index.php?c=NhaSanXuat&nsx=$1 [QSA,L]
 
 RewriteRule ^sanpham/([A-z|-]+)-([0-9]+).html$ index.php?c=SanPham$Url=$1&id=$2 [QSA,L]
 
+RewriteRule ^login$ index.php?c=Login [L]
+
 RewriteRule ^test.*$ index.php?c=Test [L] 
 
 
