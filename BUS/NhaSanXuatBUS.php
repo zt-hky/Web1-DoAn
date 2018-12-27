@@ -29,7 +29,7 @@ class NhaSanXuatBUS
         $lstNSX = $this->NhaSanXuatDAO->getfUrl($Url);
         if(count($lstNSX) > 0)
         {
-            return $lstNSX[0]['idNSX'];
+            return $lstNSX[0]->idNSX;
         }
         else
         {
