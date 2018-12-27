@@ -14,10 +14,17 @@ class UserDAO extends DB
         {
             $User = new DTO\User();
             $User->readRow($row);
-            $lstSanPham[] = $SanPham;
+            $lstUser[] = $User;
         }
         return $lstUser;
     }  
+
+    public function getUser($user)
+    {
+        $sql = "SELECT `id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`";
+        $sql .= "FROM `USER` WHERE `UserName` = '$user'";
+        return $this->ExcManyRow($sql);
+    }
 
     public function getAll()
     {

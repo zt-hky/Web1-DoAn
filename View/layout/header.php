@@ -37,8 +37,9 @@
                   </nav>
         <section class="header_intro">
             <section class="header_intro_1">
-              
+                      <a href="<?= asset('')?>">
                 <img src="<?= asset('images/logo.png') ?>" alt="">
+                </a>
             </section>
             <section class="header_intro_2">
                 <section>
