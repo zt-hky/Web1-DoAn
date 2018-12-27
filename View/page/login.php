@@ -18,7 +18,7 @@
            
             <button type="submit" name="btn_submit" value="login">Đăng nhập</button>
             </form>
-            <a href=""> Chưa có tài khoản? Đăng ký ngay!</a>
+            <a href="<?php asset('singup')?>"> Chưa có tài khoản? Đăng ký ngay!</a>
     </section>
     <script src="<?= asset('js/jquery-3.3.1.min.js')?>"></script>
 <script src="<?=asset('js/bootstrap.min.js')?>"></script>

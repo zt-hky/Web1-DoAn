@@ -7,19 +7,32 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                       <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="<?= asset('') ?>">Trang chủ<span class="sr-only">(current)</span></a>
+                        </li>
+                      <?php  if(isset($_SESSION['user']))
+                      { ?>
+
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Thông tin đơn hàng</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Features</a>
+                          <a class="nav-link" href="<?= asset('logout')?>">Đăng xuất</a>
+                        </li>
+                      <? } else {
+                        ?>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<?php asset('login') ?>">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Pricing</a>
+                          <a class="nav-link" href="<?= asset('singup')?>">Đăng kí</a>
                         </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                              </li>
+                        <?php
+                      }
+                      ?>
+
+
                       </ul>
-                   
                     </div>
                   </nav>
         <section class="header_intro">
