@@ -18,6 +18,8 @@ RewriteRule ^logout$ index.php?c=Logout [l]
 
 RewriteRule ^login$ index.php?c=Login [L]
 
+RewriteRule ^signup$ index.php?c=Signup [L]
+
 RewriteRule ^test.*$ index.php?c=Test [L] 
 
 

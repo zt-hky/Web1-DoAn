@@ -19,10 +19,23 @@ class UserDAO extends DB
         return $lstUser;
     }  
 
+    public function Insert($user)
+    {
+        $sql = "INSERT INTO `USER`(`id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`) ";
+        $sql .= "VALUES ($user->id,$user->UserName,$user->FullName,$user->Password,$user->DataBirh,$user->idCity,$user->Email)";
+    }
+
     public function getUser($user)
     {
         $sql = "SELECT `id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`";
         $sql .= "FROM `USER` WHERE `UserName` = '$user'";
+        return $this->ExcManyRow($sql);
+    }
+
+    public function getId($id)
+    {
+        $sql = "SELECT `id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`";
+        $sql .= "FROM `USER` WHERE `id` = '$id'";
         return $this->ExcManyRow($sql);
     }
 

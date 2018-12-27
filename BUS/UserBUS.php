@@ -29,4 +29,14 @@ class UserBUS
         }
     }
 
+    public function SignUp($user,$password,$date,$city,$fullname)
+    {
+        if(count($this->UserDAo->getUser($user)) == 1 )
+        {
+            return fasle;
+        }
+
+        
+    }
+
 }

@@ -18,6 +18,7 @@
              
                 <?php  } ?>
             </section>
+            <?php if($page['amountPage'] >1){  ?>
             <nav aria-label="Page navigation example paging">
                 <ul class="pagination">
                     <li class="page-item <?php if($page['pageNow'] == 1) echo 'disabled' ?>">
@@ -47,5 +48,6 @@
                     </li>
                 </ul>
             </nav>
+                    <?php } ?>
         </section>
  

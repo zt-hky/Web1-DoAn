@@ -25,7 +25,7 @@
                           <a class="nav-link" href="<?php asset('login') ?>">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="<?= asset('singup')?>">Đăng kí</a>
+                          <a class="nav-link" href="<?= asset('signup')?>">Đăng kí</a>
                         </li>
                         <?php
                       }
