@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 26, 2018 at 09:48 AM
+-- Generation Time: Dec 27, 2018 at 01:52 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `LOAISANPHAM` (
   `TenLoai` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Deleted` tinyint(4) DEFAULT NULL,
   `Img` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Url` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL
+  `Url` varchar(120) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -196,7 +196,7 @@ INSERT INTO `NHASANXUAT` (`idNSX`, `TenNSX`, `Deleted`, `Url`) VALUES
 (1, 'FILA', 0, 'fila'),
 (2, 'Adidas', 0, 'adidas'),
 (3, 'Vans', 0, 'vans'),
-(4, 'Louis Vuitton', 0, 'louis vuitton'),
+(4, 'Louis Vuitton', 0, 'louis-vuitton'),
 (5, 'Chanel', 0, 'chanel'),
 (6, 'Gucci', 0, 'gucci'),
 (7, 'Nike', 0, 'nike'),
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `SANPHAM` (
   `SLBan` int(11) DEFAULT NULL,
   `MoTa` mediumtext COLLATE utf8_unicode_ci,
   `XuatXu` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `LinkURL` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Url` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `idLoaiSanPham` int(11) NOT NULL,
   `idNSX` int(11) NOT NULL,
   `Time` date DEFAULT NULL,
@@ -229,18 +229,18 @@ CREATE TABLE IF NOT EXISTS `SANPHAM` (
 -- Dumping data for table `SANPHAM`
 --
 
-INSERT INTO `SANPHAM` (`idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`) VALUES
-(1, 'Áo thun thể thao nam Adidas Coref Jersey (màu Vàng)', 549000, 54, 47, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\1.webp'),
-(2, 'Áo thun thể thao nam Adidas Coref Jersey (màu Trắng)', 549000, 53, 36, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\2.webp'),
-(3, 'Áo thun thể thao nam Adidas Tee 03 (màu Cam)', 626000, 100, 81, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\3.jpg'),
-(4, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\4.jpg'),
-(5, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-15', 0, 1, 'images\\SanPham\\4.jpg'),
-(6, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-16', 0, 1, 'images\\SanPham\\4.jpg'),
-(7, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-17', 0, 1, 'images\\SanPham\\4.jpg'),
-(8, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-18', 0, 1, 'images\\SanPham\\4.jpg'),
-(9, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-19', 0, 1, 'images\\SanPham\\4.jpg'),
-(10, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-20', 0, 1, 'images\\SanPham\\4.jpg'),
-(11, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', NULL, 1, 2, '2018-12-21', 0, 1, 'images\\SanPham\\4.jpg');
+INSERT INTO `SANPHAM` (`idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`) VALUES
+(1, 'Áo thun thể thao nam Adidas Coref Jersey (màu Vàng)', 549000, 54, 47, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\1.webp'),
+(2, 'Áo thun thể thao nam Adidas Coref Jersey (màu Trắng)', 549000, 53, 36, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Trang', 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\2.webp'),
+(3, 'Áo thun thể thao nam Adidas Tee 03 (màu Cam)', 626000, 100, 81, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Tee-03-mau-Cam', 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\3.jpg'),
+(4, 'Áo thun Adidas CAMOUFLAGE BB TEE', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-Adidas-CAMOUFLAGE-BB-TEE', 1, 2, '2018-12-14', 0, 1, 'images\\SanPham\\4.jpg'),
+(5, 'Áo FILA', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 1, '2018-12-15', 0, 1, 'images\\SanPham\\4.jpg'),
+(6, 'VANS', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 3, '2018-12-16', 0, 1, 'images\\SanPham\\4.jpg'),
+(7, 'Louis Vuitton', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 4, '2018-12-17', 0, 1, 'images\\SanPham\\4.jpg'),
+(8, 'Chanel', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 5, '2018-12-18', 0, 1, 'images\\SanPham\\4.jpg'),
+(9, 'Gucci', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 6, '2018-12-19', 0, 1, 'images\\SanPham\\4.jpg'),
+(10, 'Nike', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 7, '2018-12-20', 0, 1, 'images\\SanPham\\4.jpg'),
+(11, 'Converse', 590000, 54, 37, NULL, 'Châu Âu', 'ao-thun-the-thao-nam-Adidas-Coref-Jery-Mau-Vang', 1, 8, '2018-12-21', 0, 1, 'images\\SanPham\\4.jpg');
 
 -- --------------------------------------------------------
 
@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `USER` (
   `id` int(11) NOT NULL,
   `UserName` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
   `FullName` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Password` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Password` varchar(120) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DateBirth` date DEFAULT NULL,
   `idCity` int(11) NOT NULL,
   `Email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
@@ -263,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `USER` (
 --
 
 INSERT INTO `USER` (`id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`) VALUES
-(1, 'an123', 'Nguyễn Thanh An', NULL, '1998-12-16', 1, 'an123@gmail.com'),
+(1, 'zungtaz', 'Nguyễn Hồng Kỳ', '$2y$10$eJ35tchwuARpV5jng/pf/uDiWChfKZWwn9tLMbCzIUTeTceTywAKe', '1998-12-16', 1, 'an123@gmail.com'),
 (2, 'khanh1998', 'Nguyễn Hữu Khánh', NULL, '1988-02-07', 2, 'khanh1998@gmail.com'),
 (3, 'ky156000', 'Nguyễn Hồng Kỳ', NULL, '1999-01-08', 3, 'ky156000@gmail.com'),
 (4, 'thanhbinh12', 'Trần Thanh Bình', NULL, '1995-07-03', 4, 'thanhbinh12@gmail.com'),

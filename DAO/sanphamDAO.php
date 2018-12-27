@@ -27,13 +27,13 @@ class SanPhamDAO extends DB
 
     public function getAll()
     {
-        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM";
+        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, Url, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM";
         return $this->ExcManyRow($sql);
     }
 
     public function getAllVail()
     {
-        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
         $sql = $sql." FROM `SANPHAM`";
         $sql = $sql."WHERE `Deleted` = 0";
         return $this->ExcManyRow($sql);
@@ -41,7 +41,7 @@ class SanPhamDAO extends DB
 
     public function getAvailLimit($begin, $limit)
     {
-        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
         $sql = $sql."FROM `SANPHAM`";
         $sql = $sql."WHERE `Deleted` = 0";
         $sql = $sql." LIMIT $begin, $limit";
@@ -60,22 +60,26 @@ class SanPhamDAO extends DB
     public function getByID($id)
     {
 
-        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted,Img FROM SANPHAM WHERE idSanPham = $id";
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `idSanPham` = $id ";
+     
         $result = $this->ExcuteQuery($sql);
+     
         $row = mysqli_fetch_array($result);
         $SanPham = new DTO\SanPham();
         $SanPham->readRow($row);
         return $SanPham;
+       
     }
 
     public function getVailNSX($idNSX)
     {
-        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `idNSX` = $idNSX " ;
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `idNSX` = $idNSX " ;
         return $this->ExcManyRow($sql);
     }
     public function getSPlquan($idloaiSP)
     {
-        $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idLoaiSanPham` =$idloaiSP LIMIT 6"  ;
+        $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idLoaiSanPham` =$idloaiSP "  ;
+        var_dump($sql);
         return $this->ExcManyRow($sql);
     }
 }

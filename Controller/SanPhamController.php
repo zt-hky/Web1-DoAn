@@ -10,7 +10,25 @@ $SP = $spBUS->getbyID($id);
 $idlSP=$SP->idLoaiSanPham;
 $idlSP=(int)$idlSP;
 
-$SPlquan=$spBUS->getSPlquan($idlSP);
+
+$idNSX=$SP->idNSX;
+
+$idNSX=(int)$idNSX;
+
+$nsxBUS=new BUS\NhaSanXuatBUS();
+$nsx=$nsxBUS->getdatabyid($idNSX);
+
+
+
+
+$lspBUS = new BUS\LoaiSanPhamBUS();
+
+$tenlSP=$lspBUS->getdatabyid($idlSP);
+
+
+$spBUS2=new BUS\SanPhamBUS;
+$spBUS2->getSPlquan($idlSP);
+
 
 
 if($id==false)
@@ -19,11 +37,16 @@ if($id==false)
     return;
 }
 $url=$_GET['Url'];
-$lspBUS = new BUS\LoaiSanPhamBUS();
+
+
+
 $v_Data=array();
 $v_Data['lstLoaiSanPham'] = $lspBUS->getAllAvailable();
 $v_Data['chitiet']=$SP;
-$v_Data['SPlquan']=$SPlquan;
+$v_Data['nsx']=$nsx;
+
+$v_Data['loaiSP']=$tenlSP;
+$v_Data['SPlquan']=$spBUS2->getDataLimit(1,6);
 
 
 

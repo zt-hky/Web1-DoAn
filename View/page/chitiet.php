@@ -6,7 +6,7 @@ view('layout/head');
 
 <?= view('layout/header');
     view('layout/navbar',array("lstLoaiSanPham"=>$lstLoaiSanPham));
-view('layout/chitietsanpham',array( 'chitiet'=>$chitiet,'SPlquan'=>$SPlquan));
+view('layout/chitietsanpham',array( 'chitiet'=>$chitiet,'SPlquan'=>$SPlquan,'loaiSP'=>$loaiSP,'nsx'=>$nsx));
 view('layout/footer');
 ?>
 

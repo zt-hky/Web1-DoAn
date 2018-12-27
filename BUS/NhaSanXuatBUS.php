@@ -36,5 +36,9 @@ class NhaSanXuatBUS
             return false;
         }
     }
+    public function getdatabyid($id)
+    {
+        return $this->NhaSanXuatDAO->getdatabyid($id);
+    }
 
 }
