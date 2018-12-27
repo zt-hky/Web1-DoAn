@@ -33,7 +33,7 @@ class LoaiSanPhamDAO extends DB
     public function getdatabyid($id)
     {
        
-        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `idLoaiSanPham`=$id" ;
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `idLoaiSanPham` = $id" ;
         $result = $this->ExcuteQuery($sql);
        
         $row = mysqli_fetch_array($result);

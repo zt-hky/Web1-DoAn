@@ -16,10 +16,9 @@ $idNSX=(int)$idNSX;
 $nsxBUS=new BUS\NhaSanXuatBUS();
 $nsx=$nsxBUS->getdatabyid($idNSX);
 
-
-
-
 $lspBUS = new BUS\LoaiSanPhamBUS();
+
+$idlSP = $SP->idLoaiSanPham;
 
 $tenlSP=$lspBUS->getdatabyid($idlSP);
 
