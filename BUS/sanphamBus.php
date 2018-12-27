@@ -32,6 +32,11 @@ class SanPhamBUS
     {
         return $this->SanPhamDAO->getByNSX($idNSX);
     }
+    public function getbyID($idSP)
+    {
+        return $this->SanPhamDAO->getByID($idSP);
+        
+    }
 }
 
 
