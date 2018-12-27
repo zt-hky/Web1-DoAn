@@ -7,13 +7,14 @@
                 foreach($lstSanPham as $SanPham) 
                 {
                 ?>
-                <article class="content_item_list_item">
+                
+                <a href="<?= asset("sanpham/".$SanPham->Url."-".$SanPham->idSanPham.".html") ?>" class="content_item_list_item">
                     <img src="<?php asset($SanPham->Img)?>" alt="">
                     <h4><?php echo substr($SanPham->TenSP,0,50) ?></h4>
                     <div><?php echo round($SanPham->Gia) ?>đ</div>
                     <button>Mua ngay</button>
                     <i>Lượt mua: <?php echo $SanPham->SLBan ?></i>
-                </article>
+                </a>
              
                 <?php  } ?>
             </section>

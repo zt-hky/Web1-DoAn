@@ -28,7 +28,7 @@ class SanPham
         $this->SLBan         = 0;
         $this->MoTa          = "";
         $this->XuatXu        = "";
-        $this->LinkURL       = "";
+        $this->Url       = "";
         $this->idLoaiSanPham = 0;
         $this->idNSX         = 0;
         $this->Time;
@@ -44,7 +44,7 @@ class SanPham
         $this->SLBan         = $row["SLBan"];
         $this->MoTa          = $row["MoTa"]; 
         $this->XuatXu        = $row["XuatXu"];
-        $this->LinkURL       = $row["LinkURL"];
+        $this->Url           = $row["Url"];
         $this->idLoaiSanPham = $row["idLoaiSanPham"];
         $this->idNSX         = $row["idNSX"];
         $this->Time          = $row["Time"];
