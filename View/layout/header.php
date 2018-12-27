@@ -52,7 +52,21 @@
             </section>
             <section class="header_intro_3"> 
                 <img src="<?= asset('images/avatar.png') ?>" alt="">
-                <h5>Nguyễn Hữu Khánh</h5>
+                <h5>
+                  <?php 
+                  if(isset($_SESSION['user']))
+                  {
+                   
+                      $user = $_SESSION['user'];
+                      $DAO = new DAO\UserDAO();
+                      echo $DAO->getUser($user)[0]->FullName;
+                  }
+                  else
+                  {
+                    echo "Anonymous";
+                  }
+                  ?>
+                </h5>
             </section>
 
         </section>

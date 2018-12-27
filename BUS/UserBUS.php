@@ -6,7 +6,7 @@ use DAO;
 
 class UserBUS
 {
-    var $UserDAo;
+    var $UserDAO;
 
     public function __construct()
     {
@@ -21,7 +21,7 @@ class UserBUS
 
         if (password_verify($pass, $user->Password))
         {
-            return $user->id;
+            return $user->UserName;
         }
         else
         {
@@ -29,14 +29,25 @@ class UserBUS
         }
     }
 
-    public function SignUp($user,$password,$date,$city,$fullname)
+    public function SignUp($UserName,$Password,$DateBirth,$idCity,$FullName)
     {
-        if(count($this->UserDAo->getUser($user)) == 1 )
+        if(count($this->UserDAO->getUser($UserName)) >= 1 )
         {
-            return fasle;
+            return false;
         }
+        
+        $User = new DTO\User();
 
         
+        $User->UserName = $UserName ;
+        $User->Password = password_hash($Password, PASSWORD_DEFAULT);  
+        $User->DateBirth =$DateBirth ;
+        $User->idCity =$idCity ;
+        $User->FullName = $FullName;
+      
+
+        $this->UserDAO->Insert($User);
+        return true;
     }
 
 }

@@ -21,8 +21,10 @@ class UserDAO extends DB
 
     public function Insert($user)
     {
-        $sql = "INSERT INTO `USER`(`id`, `UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`) ";
-        $sql .= "VALUES ($user->id,$user->UserName,$user->FullName,$user->Password,$user->DataBirh,$user->idCity,$user->Email)";
+        #print_r($user);
+        $sql = "INSERT INTO `USER`(`UserName`, `FullName`, `Password`, `DateBirth`, `idCity`, `Email`) ";
+        $sql .= "VALUES ('$user->UserName','$user->FullName','$user->Password','$user->DateBirth','$user->idCity','$user->Email')";
+        return $this->ExcuteQuery($sql);
     }
 
     public function getUser($user)
