@@ -59,7 +59,8 @@ class SanPhamDAO extends DB
 
     public function getByID($id)
     {
-        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Img Time, Deleted FROM SANPHAM WHERE idSanPham = $id";
+
+        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, LinkURL, idLoaiSanPham, idNSX, Time, Deleted,Img FROM SANPHAM WHERE idSanPham = $id";
         $result = $this->ExcuteQuery($sql);
         $row = mysqli_fetch_array($result);
         $SanPham = new DTO\SanPham();
@@ -69,7 +70,12 @@ class SanPhamDAO extends DB
 
     public function getVailNSX($idNSX)
     {
-        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idNSX` = $idNSX";
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `idNSX` = $idNSX " ;
+        return $this->ExcManyRow($sql);
+    }
+    public function getSPlquan($idloaiSP)
+    {
+        $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idLoaiSanPham` =$idloaiSP LIMIT 6"  ;
         return $this->ExcManyRow($sql);
     }
 }

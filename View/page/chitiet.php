@@ -5,8 +5,8 @@ view('layout/head');
 <body>
 
 <?= view('layout/header');
-view('layout/navbar',array("lstLoaiSanPham"=>$lstLoaiSanPham));
-view('layout/content',array('idsanpham'=>$idSanPham));
+    view('layout/navbar',array("lstLoaiSanPham"=>$lstLoaiSanPham));
+view('layout/chitietsanpham',array( 'chitiet'=>$chitiet,'SPlquan'=>$SPlquan));
 view('layout/footer');
 ?>
 
