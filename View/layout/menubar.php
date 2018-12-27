@@ -3,7 +3,7 @@
             <ul class="list-group">
 <?php  foreach ($lstNSX as $NSX) {?>
                 <li class="list-group-item">
-                    <a href="<?= asset('nsx/'.$NSX->Url) ?>"><?php echo $NSX->TenNSX ?></a>
+                    <a href="<?= asset('nsx/'.$NSX->Url.'#idContentSP') ?>"><?php echo $NSX->TenNSX ?></a>
                 </li>
 <?php }?>
 

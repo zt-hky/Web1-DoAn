@@ -25,19 +25,19 @@
         <section class="header_intro">
             <section class="header_intro_1">
               
-                <img src="images/logo.png" alt="">
+                <img src="<?= asset('images/logo.png') ?>" alt="">
             </section>
             <section class="header_intro_2">
                 <section>
                     <input type="text" placeholder="Tìm kiếm sản phẩm">
-                 <button> <img src="images/search.png" alt=""></button>   
+                 <button> <img src="<?= asset('images/search.png')?>" alt=""></button>   
                 </section>
-                <button class="header_intro_2_img">  <img  src="images/icon-shop.png" alt=""></button> 
+                <button class="header_intro_2_img">  <img  src="<?= asset('images/icon-shop.png') ?>" alt=""></button> 
               
 
             </section>
             <section class="header_intro_3"> 
-                <img src="images/avatar.png" alt="">
+                <img src="<?= asset('images/avatar.png') ?>" alt="">
                 <h5>Nguyễn Hữu Khánh</h5>
             </section>
 

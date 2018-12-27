@@ -31,6 +31,14 @@ class SanPhamDAO extends DB
         return $this->ExcManyRow($sql);
     }
 
+    public function getAllVail()
+    {
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
+        $sql = $sql." FROM `SANPHAM`";
+        $sql = $sql."WHERE `Deleted` = 0";
+        return $this->ExcManyRow($sql);
+    }
+
     public function getAvailLimit($begin, $limit)
     {
         $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img`";
@@ -59,7 +67,7 @@ class SanPhamDAO extends DB
         return $SanPham;
     }
 
-    public function getByNSX($idNSX)
+    public function getVailNSX($idNSX)
     {
         $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `LinkURL`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `idNSX` = $idNSX";
         return $this->ExcManyRow($sql);

@@ -1,6 +1,6 @@
 
         
-        <section class="content_item">
+        <section id="idContentSP" class="content_item">
             <section class="content_item_list">
                 <?php
         
