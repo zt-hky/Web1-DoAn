@@ -23,4 +23,9 @@ class LoaiSanPhamBUS
     {
         return $this->LoaiSanPhamDAO->getAllAvailable();
     }
+    public function getdatabyid($id)
+    {
+      
+        return $this->LoaiSanPhamDAO->getdatabyid($id);
+    }
 }

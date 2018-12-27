@@ -38,5 +38,17 @@ class NhaSanXuatDAO extends DB
         $sql = "SELECT `idNSX`, `TenNSX`, `Deleted` , `Url` FROM `NHASANXUAT` WHERE `Deleted` = 0";
         return $this->ExcManyRow($sql);
     }
+    public function getdatabyid($id)
+    {
+             $sql="SELECT `idNSX`, `TenNSX`, `Deleted` , `Url` FROM `NHASANXUAT` WHERE `idNSX` = $id";
+      
+            $result = $this->ExcuteQuery($sql);
+               $row = mysqli_fetch_array($result);
+              $NSX = new DTO\NhaSanXuat();
+        $NSX->readRow($row);    
+        return  $NSX;
+    
+       
+    }
     
 }

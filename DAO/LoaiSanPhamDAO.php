@@ -17,7 +17,7 @@ class LoaiSanPhamDAO extends DB
         }
         return $lstLoaiSanPham;
     }
-
+   
     public function getAllAvailable(Type $var = null)
     {
         $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `Deleted` = 0";
@@ -29,5 +29,18 @@ class LoaiSanPhamDAO extends DB
     {
         $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM`";
         return $this->ExcManyRow($sql);
+    }
+    public function getdatabyid($id)
+    {
+       
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `idLoaiSanPham`=$id" ;
+        $result = $this->ExcuteQuery($sql);
+       
+        $row = mysqli_fetch_array($result);
+      
+        $LoaiSanPham = new DTO\LoaiSanPham();
+        $LoaiSanPham->readRow($row);    
+        return  $LoaiSanPham;
+    
     }
 }

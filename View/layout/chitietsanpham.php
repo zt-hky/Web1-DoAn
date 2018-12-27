@@ -6,8 +6,11 @@
             </div>
             <div class="col-7">
                 <h3><?=$chitiet->TenSP ?></h3>
-                <h5>Nhà sản xuất:</h5>
-
+                <h5>Nhà sản xuất: <?=$nsx->TenNSX?>     </h5>
+                <div>Loại Sản Phẩm: <?=$loaiSP->TenLoai ?> </div>
+                <div>Xuất Xứ: <?=$chitiet->XuatXu?></div>
+                <div>Số lượt xem: <?=$chitiet->SLXem?></div>
+                <div> Số lượt mua: <?=$chitiet->SLBan?> </div>
                 <div class="price"> <?=$chitiet->Gia?>đ</div>
                 <div class="input">
                     <input type="number" placeholder="Số Lượng">
@@ -30,12 +33,16 @@
             foreach($SPlquan as $sp)
             {
             ?>
-                <div class="coll">
+            <a href="<?=asset("sanpham")."-".$sp->Url."-".$sp->idSanPham?>">
+            <div class="coll">
                     <div class='coll-1'> <img src="<?=asset($sp->Img)?>" alt="s"></div>
 
                     <h4><?=$sp->TenSP?></h4>
                     <div class='coll-3'><?= $sp->Gia?> đ</div>
                 </div>
+
+            </a>
+                
             <?php }?>
 
             </div>
