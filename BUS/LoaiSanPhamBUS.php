@@ -28,4 +28,19 @@ class LoaiSanPhamBUS
       
         return $this->LoaiSanPhamDAO->getdatabyid($id);
     }
+
+    public function getIdUrl($url)
+    {
+        
+        $lstLSP = $this->LoaiSanPhamDAO->getfUrl($url);
+     
+        if(count($lstLSP) > 0)
+        {
+            return $lstLSP[0]->idLoaiSanPham;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

@@ -83,6 +83,10 @@ class SanPhamBUS
         
     }
     
+    public function readVailLSP($idLSP)
+    {
+        $this->Data= $this->SanPhamDAO->getSPLSP($idLSP);
+    }
   
 }
 

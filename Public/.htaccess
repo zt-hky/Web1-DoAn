@@ -8,7 +8,7 @@ RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt|webp)$
 RewriteRule ^$ index.php [L]
 
 
-RewriteRule ^kind/([A-z|-]+)/?$ index.php?c=Catalog&lsp=$1 [QSA,L]
+RewriteRule ^kind/([A-z|-]+)/?$ index.php?c=LoaiSanPham&lsp=$1 [QSA,L]
 
 RewriteRule ^nsx/([A-z|-]+)/?$ index.php?c=NhaSanXuat&nsx=$1 [QSA,L]   
 

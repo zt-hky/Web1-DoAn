@@ -87,6 +87,12 @@ class SanPhamDAO extends DB
         $sql="SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM` WHERE `Deleted` = 0 and `idLoaiSanPham`  =$idloaiSP"  ;
         return $this->ExcManyRow($sql);
     }
+
+    public function getSPLSP($idLSP)
+    {
+        $sql = "SELECT `idSanPham`, `TenSP`, `Gia`, `SLXem`, `SLBan`, `MoTa`, `XuatXu`, `Url`, `idLoaiSanPham`, `idNSX`, `Time`, `Deleted`, `Sex`, `Img` FROM `SANPHAM`  WHERE `Deleted` = 0 AND `idLoaiSanPham` = $idLSP " ;
+        return $this->ExcManyRow($sql);
+    }
 }
 
 

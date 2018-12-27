@@ -20,20 +20,20 @@ class LoaiSanPhamDAO extends DB
    
     public function getAllAvailable(Type $var = null)
     {
-        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `Deleted` = 0";
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`, `Url` FROM `LOAISANPHAM` WHERE `Deleted` = 0";
         return $this->ExcManyRow($sql);
     }
 
 
     public function getAll()
     {
-        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM`";
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`, `Url` FROM `LOAISANPHAM`";
         return $this->ExcManyRow($sql);
     }
     public function getdatabyid($id)
     {
        
-        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `idLoaiSanPham` = $id" ;
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img` FROM `LOAISANPHAM` WHERE `idLoaiSanPham` = '$id'" ;
         $result = $this->ExcuteQuery($sql);
        
         $row = mysqli_fetch_array($result);
@@ -42,5 +42,11 @@ class LoaiSanPhamDAO extends DB
         $LoaiSanPham->readRow($row);    
         return  $LoaiSanPham;
     
+    }
+
+    public function getfUrl($url)
+    {
+        $sql = "SELECT `idLoaiSanPham`, `TenLoai`, `Deleted`, `Img`, `Url` FROM `LOAISANPHAM` WHERE `Url` = '$url'";
+        return $this->ExcManyRow($sql);
     }
 }

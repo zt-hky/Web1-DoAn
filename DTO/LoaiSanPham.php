@@ -9,6 +9,7 @@ class LoaiSanPham
     var $TenLoai;
     var $Deleted;
     var $Img;
+    var $Url;
     
     public function __construct()
     {
@@ -16,6 +17,7 @@ class LoaiSanPham
         $this->TenLoai       = "";
         $this->Deleted       = false;
         $this->Img           = "";
+        $this->Url           = "";
     }
 
     public function readRow($row)
@@ -24,5 +26,6 @@ class LoaiSanPham
         $this->TenLoai       = $row["TenLoai"];
         $this->Deleted       = $row["Deleted"];
         $this->Img           = $row["Img"];
+        $this->Url           = $row["Url"];
     }
 }
