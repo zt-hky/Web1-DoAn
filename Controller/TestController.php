@@ -1,7 +1,7 @@
 <?php
 
-echo "<pre>";
+header("Location: http://doan.local/");
 
-print_r($_GET);
+?>
 
-echo "</pre>";
+<h1>Hello</h1>
