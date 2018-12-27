@@ -1,6 +1,13 @@
+<?php 
+    $spBUS = new BUS\SanPhamBUS();
+    $spBUS->readAll();
+    $listSP = $spBUS->getData();
+
+    #print_r($listSP);
+?>
 <section class="content_main">
 
-    <h2>Danh mục</h2>
+    <h2>Danh sách sản phẩm</h2>
     <section class="content_main_search">
         <section class="content_main_search-1"><input type="text" placeholder="Nhập từ khóa tìm kiếm"> <button><img src="images/search.png" alt=""></button> </section>
         <select name="" id="">
@@ -26,94 +33,24 @@
 
         </thead>
         <tbody>
+            <?php 
+                foreach($listSP as $SP)
+                {
+            ?>
         <tr>
             <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
+            <td><?php echo $SP->idSanPham?></td>
+            <td><?php echo $SP->TenSP?></td>
+            <td><img src="<?php asset($SP->Img)?>" alt=""></td>
+            <td><input type="number" value="<?php echo $SP->Gia?>"/></td>
             <td><input type="checkbox"></td>
             <td><i class="fa fa-pencil-square-o"></i>
                 <i class="fa fa-trash"></i>
             </td>
         </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
-            <td><input type="checkbox"></td>
-            <td><i class="fa fa-pencil-square-o"></i>
-                <i class="fa fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
-            <td><input type="checkbox"></td>
-            <td><i class="fa fa-pencil-square-o"></i>
-                <i class="fa fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
-            <td><input type="checkbox"></td>
-            <td><i class="fa fa-pencil-square-o"></i>
-                <i class="fa fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
-            <td><input type="checkbox"></td>
-            <td><i class="fa fa-pencil-square-o"></i>
-                <i class="fa fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>132</td>
-            <td>12s</td>
-            <td><img src="images/nam.png" alt=""></td>
-            <td><input type="number"> </td>
-            <td><input type="checkbox"></td>
-            <td><i class="fa fa-pencil-square-o"></i>
-                <i class="fa fa-trash"></i>
-            </td>
-        </tr>
+                <?php } ?>
 
         </tbody>
         <tfoot></tfoot>
     </table>
-    <nav aria-label="Page navigation example paging">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
 </section>

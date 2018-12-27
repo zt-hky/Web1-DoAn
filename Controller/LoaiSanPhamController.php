@@ -8,7 +8,7 @@ $idLSP = $lspBUS->getIdUrl($urlLSP);
 
 if($idLSP==false)
 {
-    #require('404.php');
+    require('404.php');
     return;
 }
 

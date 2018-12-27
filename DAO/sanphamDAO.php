@@ -27,7 +27,7 @@ class SanPhamDAO extends DB
 
     public function getAll()
     {
-        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, Url, idLoaiSanPham, idNSX, Time, Deleted FROM SANPHAM";
+        $sql = "SELECT idSanPham, TenSP, Gia, SLXem,SLBan,MoTa,XuatXu, Url, idLoaiSanPham, idNSX, Time, Deleted, Img FROM SANPHAM";
         return $this->ExcManyRow($sql);
     }
 

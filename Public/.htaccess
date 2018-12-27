@@ -20,7 +20,11 @@ RewriteRule ^login$ index.php?c=Login [L]
 
 RewriteRule ^signup$ index.php?c=Signup [L]
 
-RewriteRule ^test.*$ index.php?c=Test [L] 
+RewriteRule ^admin/([a-z]+)/?$ index.php?c=Admin&a=$1 [QSA,L] 
+
+RewriteRule ^admin/?$ index.php?c=Admin [L] 
+
+
 
 
 

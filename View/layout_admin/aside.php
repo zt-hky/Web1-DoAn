@@ -1,27 +1,27 @@
 <aside class="aside">
      <header class="aside_header">
-         <img src="images/logo.png" alt="">
-            <h1>SHOP</h1> 
+         <img src="<?php asset('images/logo.png') ?>" alt="">
+            <h1>Admin</h1> 
      </header>
    
         <hr >
         <ul class="aside_list">
             <li class="aside_list_items">
-                <a href="">Quản lý Menu</a>
+                <a href="">Quản lý Sản phẩm</a>
                 <ul>
-                    <li><a href="">thêm danh mục</a> </li>
-                    <li> <a href="">Danh sách danh mục</a> </li>
+                    <li><a href="<?= asset('admin/themsanpham')?>">Thêm Sản phẩm</a> </li>
+                    <li> <a href="<?= asset('admin/listsanpham')?>">Danh sách Sản phẩm</a> </li>
 
                 </ul>
             </li>
             <li class="aside_list_items">
-                <a href="" class="test">Quản lý Sản phẩm</a>
+                <a href="" class="test">Quản lý Loại sản phẩm</a>
                 <ul>
 
-                    <li><a href="" >   Thêm Sản phẩm</a>
+                    <li><a href="<?= asset('admin/themdanhmuc')?>" >Thêm Loại sản phẩm</a>
                      
                     </li>
-                    <li> <a href="">Danh sách sản Phẩm</a></li>
+                    <li> <a href="<?= asset('admin/listdanhmuc')?>">Danh sách Loại sản phẩm</a></li>
 
                 </ul>
             </li>

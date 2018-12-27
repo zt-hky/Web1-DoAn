@@ -1,7 +1,9 @@
+<?php 
+   ## $lspBUS = new BUS\LoaiSanPhamBUS();
+    #$listLSP = $lsp->getAll();
+?>
+
 <section class="content">
-
-
-
     <section class="content_header">
         <button><i class="fa fa-phone"></i>Hỗ trợ 24/7: 0912765625 </button>
         <button><i class="fa fa-envelope-o"></i>kkshop@gmail.com </button>
