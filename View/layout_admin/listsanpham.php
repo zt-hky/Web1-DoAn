@@ -9,7 +9,7 @@
 
     <h2>Danh sách sản phẩm</h2>
     <section class="content_main_search">
-        <section class="content_main_search-1"><input type="text" placeholder="Nhập từ khóa tìm kiếm"> <button><img src="images/search.png" alt=""></button> </section>
+        <section class="content_main_search-1"><input type="text" placeholder="Nhập từ khóa tìm kiếm"> <button><img src="<?= asset('images/search.png')?>" alt=""></button> </section>
         <select name="" id="">
             <option value="">Tất cả danh mục</option>
             <option value="">Áo</option>

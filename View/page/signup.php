@@ -17,32 +17,39 @@
         <div class="form-group col-4">
             <label for="">Ngày</label>
             <select class="form-control custom-select custom-select-sm mb-3" name="day">
-            <option value="1">1</option>
-            <option value="2">2</option>
-             <option value="3">3</option>
+           
+            <?php
+            for($i = 1; $i<=31;$i++)
+            {
+            ?>
+           
+            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+            <?php } ?>
             </select>
         </div>
         <div class="form-group col-4">
             <label for="">Tháng</label>
             <select class="form-control custom-select custom-select-sm mb-3" name="month">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="3">4</option>
-            <option value="3">5</option>
-            <option value="3">6</option>
-            <option value="3">7</option>
-            <option value="3">8</option>
-            <option value="3">9</option>
+            <?php
+            for($i = 1; $i<=12;$i++)
+            {
+            ?>
+           
+            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+            <?php } ?>
 
             </select>
         </div>
         <div class="form-group col-4" name="year">
             <label for="">Năm</label>
             <select name = "year" class="form-control custom-select custom-select-sm mb-3">
-            <option value="2005">2005</option>
-            <option value="2004">2004</option>
-             <option value="2003">2003</option>
+            <?php
+            for($i = 2010; $i>=1950;$i--)
+            {
+            ?>
+           
+            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+            <?php } ?>
             </select>
         </div>
     </div>

@@ -33,7 +33,7 @@
             foreach($SPlquan as $sp)
             {
             ?>
-            <a href="<?=asset("sanpham")."-".$sp->Url."-".$sp->idSanPham?>">
+            <a href="<?=asset("sanpham/".$sp->Url."-".$sp->idSanPham.".html") ?>">
             <div class="coll">
                     <div class='coll-1'> <img src="<?=asset($sp->Img)?>" alt="s"></div>
 

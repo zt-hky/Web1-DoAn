@@ -4,10 +4,10 @@
     view('layout_admin/'.$action);
 
     ?>
-<script src="js/bootstrap.min.js"></script>
+    <script src="<?=asset('js/jquery-3.3.1.min.js')?>"></script>
+<script src="<?php asset('js/bootstrap.min.js')?>"></script>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/admin.js"></script>
+
 
 <link rel="stylesheet" href="<?=asset('css/admin.css')?>">
 

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../scss/size.scss"
-    ],
-    "names": [],
-    "file": "size.min.css"
-}
